@@ -1,0 +1,102 @@
+﻿@model IEnumerable<SeasNve.Common.Model.PersistData.CRMPersistData>
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SerializedObject)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransferOk)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ErrorMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransferDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ExceptionMessage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ErrorCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InProgress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SerializedObject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransferOk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ErrorMessage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransferDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ExceptionMessage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ErrorCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InProgress)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

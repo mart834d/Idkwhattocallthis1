@@ -1,0 +1,117 @@
+﻿@model Dashboard.ViewModel.HomeModel
+
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>View</h1>
+
+<div class="alert alert-danger" role="alert">
+    @Model.RedCount
+</div>
+<div class="alert alert-warning" role="alert">
+    @Model.YellowCount
+</div>
+
+@*<table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    CreatedDate
+                </th>
+                <th>
+                    SerializedObject
+                </th>
+                <th>
+                    TransferOk
+                </th>
+                <th>
+                    ErrorMessage
+                </th>
+                <th>
+                    TransferDate
+                </th>
+                <th>
+                    ExceptionMessage
+                </th>
+                <th>
+                    ErrorCount
+                </th>
+                <th>
+                    TransactionId
+                </th>
+                <th>
+                    DataType
+                </th>
+                <th>
+                    InProgress
+                </th>
+                <th>
+                    OrderId
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.data)
+            {
+                var backgroundColor = "none";
+                if (item.CreatedDate < DateTime.Now.AddMinutes(-10))
+                {
+                    backgroundColor = "yellow";
+                }
+                if (item.CreatedDate < DateTime.Now.AddMinutes(-30))
+                {
+                    backgroundColor = "red";
+                }
+
+                <tr style="background-color: @backgroundColor">
+                    <td>
+                        @item.Id
+                    </td>
+                    <td>
+                        @item.CreatedDate
+                    </td>
+                    <td>
+                        @item.SerializedObject
+                    </td>
+                    <td>
+                        @item.TransferOk
+                    </td>
+                    <td>
+                        @item.ErrorMessage
+                    </td>
+                    <td>
+                        @item.TransferDate
+                    </td>
+                    <td>
+                        @item.ExceptionMessage
+                    </td>
+                    <td>
+                        @item.ErrorCount
+                    </td>
+                    <td>
+                        @item.TransactionId
+                    </td>
+                    <td>
+                        @item.DataType
+                    </td>
+                    <td>
+                        @item.InProgress
+                    </td>
+                    <td>
+                        @item.OrderId
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
